@@ -1,4 +1,3 @@
-<p align= "center">
 # Engineering Capstone Project - AUT-21-04348
 ## Robot Arm Control for Minimally Invasive Surgery
 ### by Kyle Pereira
