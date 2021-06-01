@@ -10,7 +10,7 @@ This repository demonstrates UR5 pick-and-place in ROS and Gazebo. The UR5 uses 
 - Assuming your universal robot workspace is named as `surgical_robot_ws`, download the repository to `surgical_robot_ws/src/`
   ```
   $ cd ur_ws/src
-  $ git clone https://github.com/lihuang3/ur5_ROS-Gazebo.git
+  $ git clone https://github.com/kyleprr/Capstone-Project-Surgical-Robot.git
   ```
 - Under `ur_ws/src`, there are two folders: one is the official `universal_robot`, and the other is `ur5_ROS-Gazebo`. Open file `ur5_joint_limited_robot.urdf.xacro` under `ur_ws/src/universal_robot/ur_description/urdf/`, and __make the following change to the joint limit:__
   ```
@@ -20,12 +20,12 @@ This repository demonstrates UR5 pick-and-place in ROS and Gazebo. The UR5 uses 
 These two default files do not include camera and vacuum gripper modules. 
 So we would replace these two files with customized files. 
 Under directory `ur_ws/src/ur5_ROS-Gazebo/src/ur_description/`, copy `common.gazebo.xacro` and `ur5.urdf.xacro` to `ur_ws/src/universal_robot/ur_description/urdf/`.
-- Build the code under directory `ur_ws/`,
+- Build the code under directory `surgical_robot_ws/`,
   ```
   $ catkin_make
   $ source devel/setup.bash  
   ```
-- Run the code with ROS and Gazebo
+- Run the code with ROS, Gazebo & RViz
   ```
-  $ roslaunch ur5_notebook initialize.launch 
+  $ roslaunch surgical_robot surgical_UR3.launch
   ```
