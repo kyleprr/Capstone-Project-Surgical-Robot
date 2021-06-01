@@ -29,3 +29,8 @@ Under directory `ur_ws/src/ur5_ROS-Gazebo/src/ur_description/`, copy `common.gaz
   ```
   $ roslaunch surgical_robot surgical_UR3.launch
   ```
+  
+- Run the code with ROS, Gazebo & RViz
+  ```
+  $ python surgical_robot_controller.py
+  ```
