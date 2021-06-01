@@ -7,7 +7,8 @@ from trajectory_msgs.msg import JointTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
 import rospy
 
-waypoints = [[0.0, -1.44, 1.4, 0.6, 0, -0.33], [0,0,0,0,0,0]]
+# waypoints = [[0,0,0,-1.5,-1.5,0], [0,0,0,0,0,0]] #surg
+waypoints = [[0,-1.57,0,-1.57,0,0], [0,0,0,0,0,0]] #bow
 
 def main():
     rospy.init_node('send_joints')
