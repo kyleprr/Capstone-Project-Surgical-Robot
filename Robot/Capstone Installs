@@ -22,3 +22,5 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 sudo apt-get install docker-ce
 
+
+https://github.com/MrLacquer/ur3-moveit-test
