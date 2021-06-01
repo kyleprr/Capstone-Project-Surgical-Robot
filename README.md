@@ -30,7 +30,7 @@ This repository demonstrates a surgical robot controller system for the UR3 robo
   $ roslaunch surgical_robot surgical_UR3.launch
   ```
   
-- Run the controller code
+- Run the controller code (~/surgical_robot_ws/src/surgical_robot/scripts)
   ```
   $ python surgical_robot_controller.py
   ```
