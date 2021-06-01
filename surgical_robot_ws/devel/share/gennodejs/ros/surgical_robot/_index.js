@@ -1,0 +1,1 @@
+/home/kyleprr/surgical_robot_ws/devel/.private/surgical_robot/share/gennodejs/ros/surgical_robot/_index.js

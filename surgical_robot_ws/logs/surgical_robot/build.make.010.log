@@ -1,0 +1,15 @@
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_lisp
+[ 12%] Built target blocks_poses_publisher
+[ 25%] Built target blocks_spawner
+[ 25%] Built target std_msgs_generate_messages_cpp
+[ 25%] Built target _surgical_robot_generate_messages_check_deps_Tracker
+[ 25%] Built target _surgical_robot_generate_messages_check_deps_blocks_poses
+[ 37%] Built target surgical_robot_generate_messages_nodejs
+[ 50%] Built target surgical_robot_generate_messages_lisp
+[ 62%] Built target surgical_robot_generate_messages_cpp
+[ 87%] Built target surgical_robot_generate_messages_eus
+[100%] Built target surgical_robot_generate_messages_py
+[100%] Built target surgical_robot_generate_messages

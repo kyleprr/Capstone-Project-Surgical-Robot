@@ -1,0 +1,35 @@
+[35m[1mScanning dependencies of target blocks_poses_publisher[0m
+[35m[1mScanning dependencies of target blocks_spawner[0m
+make[2]: *** No rule to make target '/home/kyleprr/surgical_robot_ws/src/ur3_ROS/blocks_poses_publisher.cpp', needed by 'CMakeFiles/blocks_poses_publisher.dir/blocks_poses_publisher.cpp.o'.  Stop.
+make[2]: *** No rule to make target '/home/kyleprr/surgical_robot_ws/src/ur3_ROS/blocks_spawner.cpp', needed by 'CMakeFiles/blocks_spawner.dir/blocks_spawner.cpp.o'.  Stop.
+CMakeFiles/Makefile2:67: recipe for target 'CMakeFiles/blocks_poses_publisher.dir/all' failed
+CMakeFiles/Makefile2:1522: recipe for target 'CMakeFiles/blocks_spawner.dir/all' failed
+make[1]: *** [CMakeFiles/blocks_poses_publisher.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/blocks_spawner.dir/all] Error 2
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_eus
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py", line 54, in <module>
+    spec = load_msg_from_file(msg_context, msg_file, full_type_name)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genmsg/msg_loader.py", line 284, in load_msg_from_file
+    with open(file_path, 'r') as f:
+IOError: [Errno 2] No such file or directory: '/home/kyleprr/surgical_robot_ws/src/ur3_ROS/msg/blocks_poses.msg'
+CMakeFiles/_surgical_robot_generate_messages_check_deps_blocks_poses.dir/build.make:57: recipe for target 'CMakeFiles/_surgical_robot_generate_messages_check_deps_blocks_poses' failed
+make[2]: *** [CMakeFiles/_surgical_robot_generate_messages_check_deps_blocks_poses] Error 1
+CMakeFiles/Makefile2:368: recipe for target 'CMakeFiles/_surgical_robot_generate_messages_check_deps_blocks_poses.dir/all' failed
+make[1]: *** [CMakeFiles/_surgical_robot_generate_messages_check_deps_blocks_poses.dir/all] Error 2
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py", line 54, in <module>
+    spec = load_msg_from_file(msg_context, msg_file, full_type_name)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genmsg/msg_loader.py", line 284, in load_msg_from_file
+    with open(file_path, 'r') as f:
+IOError: [Errno 2] No such file or directory: '/home/kyleprr/surgical_robot_ws/src/ur3_ROS/msg/Tracker.msg'
+CMakeFiles/_surgical_robot_generate_messages_check_deps_Tracker.dir/build.make:57: recipe for target 'CMakeFiles/_surgical_robot_generate_messages_check_deps_Tracker' failed
+make[2]: *** [CMakeFiles/_surgical_robot_generate_messages_check_deps_Tracker] Error 1
+CMakeFiles/Makefile2:336: recipe for target 'CMakeFiles/_surgical_robot_generate_messages_check_deps_Tracker.dir/all' failed
+make[1]: *** [CMakeFiles/_surgical_robot_generate_messages_check_deps_Tracker.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

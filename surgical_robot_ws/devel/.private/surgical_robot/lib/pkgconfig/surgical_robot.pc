@@ -1,0 +1,8 @@
+prefix=/home/kyleprr/surgical_robot_ws/devel/.private/surgical_robot
+
+Name: surgical_robot
+Description: Description of surgical_robot
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: message_runtime
