@@ -32,5 +32,5 @@ This repository demonstrates a surgical robot controller system for the UR3 robo
   
 - Run the controller code
   ```
-  $ python surgical_robot_controller.py
+  ~/surgical_robot_ws/src/surgical_robot/scripts$ python surgical_robot_controller.py
   ```
