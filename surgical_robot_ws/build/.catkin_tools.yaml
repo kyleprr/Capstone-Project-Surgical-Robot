@@ -1,6 +1,0 @@
-devel_space: /home/kyleprr/surgical_robot_ws/devel
-install: false
-install_space: /home/kyleprr/surgical_robot_ws/install
-profile: default
-source_space: /home/kyleprr/surgical_robot_ws/src
-workspace: /home/kyleprr/surgical_robot_ws

@@ -1,1 +1,0 @@
-/home/kyleprr/surgical_robot_ws/devel/.private/surgical_robot/include/surgical_robot/blocks_poses.h

@@ -1,1 +1,0 @@
-/home/kyleprr/surgical_robot_ws/devel/.private/surgical_robot/share/roseus/ros/surgical_robot/msg/blocks_poses.l

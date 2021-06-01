@@ -1,1 +1,0 @@
-/home/kyleprr/surgical_robot_ws/devel/.private/surgical_robot/share/common-lisp/ros/surgical_robot/msg/_package_blocks_poses.lisp
