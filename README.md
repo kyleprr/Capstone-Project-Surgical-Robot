@@ -7,7 +7,7 @@ This repository demonstrates UR5 pick-and-place in ROS and Gazebo. The UR5 uses 
 - This project was tested in Ubuntu 16.04 with ROS kinetic.
 - Make sure you have installed Python2.7 and some useful libraries/packages, such as Numpy, cv2, etc.
 - Install ROS kinetic, Gazebo, universal robot, Moveit, RViz. 
-- Assuming your universal robot workspace is named as `ur_ws`, download the repository to `ur_ws/src/`
+- Assuming your universal robot workspace is named as `surgical_robot_ws`, download the repository to `surgical_robot_ws/src/`
   ```
   $ cd ur_ws/src
   $ git clone https://github.com/lihuang3/ur5_ROS-Gazebo.git
