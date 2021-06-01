@@ -23,7 +23,7 @@ This repository demonstrates a surgical robot controller system for the UR3 robo
 - Build the code under directory `surgical_robot_ws/`,
   ```
   $ catkin_make
-  $ source devel/setup.bash  
+  $ source devel/setup.bash
   ```
 - Run the code with ROS, Gazebo & RViz
   ```
