@@ -156,20 +156,196 @@ class MoveGroupPythonIntefaceTutorial(object):
 
 
 
+  def go_to_joint_state4(self):
+    group = self.group
+
+    ## Planning to a Joint Goal
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [7.21E-02,-0.063394436,2.44E-01,-1.639755506,-1.54E+00,8.47E-02]
+
+    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
+    group.go(joint_goal, wait=True)
+
+    # Calling ``stop()`` ensures that there is no residual movement
+    group.stop()
+
+    # For testing:
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
+
+
+  def go_to_joint_state5(self):
+    group = self.group
+
+    ## Planning to a Joint Goal
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [1.44E+00,0.095875728,6.54E-02,-1.801468725,-1.51E+00,7.37E-02]
+
+    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
+    group.go(joint_goal, wait=True)
+
+    # Calling ``stop()`` ensures that there is no residual movement
+    group.stop()
+
+    # For testing:
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
+
+
+
+  def go_to_joint_state6(self):
+    group = self.group
+
+    ## Planning to a Joint Goal
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [1.30E+00,0.405495506,5.63E-02,-2.030675439,-1.61E+00,-1.72E+00]
+
+    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
+    group.go(joint_goal, wait=True)
+
+    # Calling ``stop()`` ensures that there is no residual movement
+    group.stop()
+
+    # For testing:
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
+
+
+  def go_to_joint_state7(self):
+    group = self.group
+
+    ## Planning to a Joint Goal
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [-1.35E-02,-0.170394006,4.43E-01,-1.88332408,-1.53E+00,2.93E-02]
+
+    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
+    group.go(joint_goal, wait=True)
+
+    # Calling ``stop()`` ensures that there is no residual movement
+    group.stop()
+
+    # For testing:
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
+
+
+  def go_to_joint_state8(self):
+    group = self.group
+
+    ## Planning to a Joint Goal
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [-8.47E-02,-0.206878358,5.66E-01,-1.944504402,-1.04E+00,-4.83E-02]
+
+    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
+    group.go(joint_goal, wait=True)
+
+    # Calling ``stop()`` ensures that there is no residual movement
+    group.stop()
+
+    # For testing:
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
+
+
+  def go_to_joint_state9(self):
+    group = self.group
+
+    ## Planning to a Joint Goal
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [5.50E-02,-0.014033148,1.21E-01,-1.672674362,-1.99E+00,1.07E-01]
+
+    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
+    group.go(joint_goal, wait=True)
+
+    # Calling ``stop()`` ensures that there is no residual movement
+    group.stop()
+
+    # For testing:
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
+
+
+
+  def go_to_joint_state10(self):
+    group = self.group
+
+    ## Planning to a Joint Goal
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [-4.02E-03,-0.201215739,7.42E-01,-2.589742394,-1.59E+00,3.45E-02]
+
+    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
+    group.go(joint_goal, wait=True)
+
+    # Calling ``stop()`` ensures that there is no residual movement
+    group.stop()
+
+    # For testing:
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
+
+
+
+  def go_to_joint_state11(self):
+    group = self.group
+
+    ## Planning to a Joint Goal
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [-1.04E-02,-0.053113435,1.42E-01,-1.580073414,-1.57E+00,3.23E-02]
+
+    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
+    group.go(joint_goal, wait=True)
+
+    # Calling ``stop()`` ensures that there is no residual movement
+    group.stop()
+
+    # For testing:
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
+
+
+
+    
+
+
+
 def main():
   try:
     print "Press 'ENTER' to begin. (CTRL + D) to exit:"
     raw_input()
     tutorial = MoveGroupPythonIntefaceTutorial() # Obatin basic robot information
 
-    print "Up"
+    print "1 - Up"
     tutorial.go_to_joint_state1() # move to home position
 
-    print "Pick Up Tool 1"
+    print "2 - Pick Up Tool 1"
     tutorial.go_to_joint_state2()
 
-    print "Move to body - Incision Start"
+    print "3 - Move to body - Incision Start"
     tutorial.go_to_joint_state3()
+
+    print "4 - Incision End"
+    tutorial.go_to_joint_state4()
+
+    print "5 - Drop tool 1"
+    tutorial.go_to_joint_state5()
+
+    print "6 - pick up tool 2"
+    tutorial.go_to_joint_state6()
+
+    print "7 - surg1"
+    tutorial.go_to_joint_state7()
+
+    print "8 - surg left"
+    tutorial.go_to_joint_state8()
+
+    print "9 - surg right"
+    tutorial.go_to_joint_state9()
+
+    print "10 - surg up"
+    tutorial.go_to_joint_state10()
+
+    print "11 - surg down"
+    tutorial.go_to_joint_state11()
 
 
 
