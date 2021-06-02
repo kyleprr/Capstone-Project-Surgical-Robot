@@ -198,8 +198,16 @@ class MoveGroupPythonIntefaceTutorial(object):
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
-### END WAYPOINTS ###
+  def go_to_joint_state_init(self):
+    group = self.group
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [0.35687346138767584, -0.3172340910461777, -0.24038239588294097, -1.541959949374295, -1.642023194088587, 1.9420099164006128]
+    group.go(joint_goal, wait=True)
+    group.stop()
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
 
+### END WAYPOINTS ###
 
 ### MAIN CONTROLLER ###
 
@@ -214,6 +222,7 @@ def main():
 
     print "2 - Pick Up Surgical Knife"
     controller.go_to_joint_state_pick_t1() # Pick up Surgical Knife
+    controller.go_to_joint_state_init() # Init
 
     print "3 - Move to body and make incision cuts"
     controller.go_to_joint_state_incision_1()
@@ -222,12 +231,14 @@ def main():
     controller.go_to_joint_state_incision_2()
     controller.go_to_joint_state_incision_1()
     controller.go_to_joint_state_incision_2()
+    controller.go_to_joint_state_init() # Init
 
     print "5 - Keep Surgical Knife back"
     controller.go_to_joint_state_drop_t1() # Keep knife back
 
     print "6 - Pick up Surgical tool"
     controller.go_to_joint_state_pick_t2() # Pick up new tool
+    controller.go_to_joint_state_init() # Init
 
     print "7 - Perform Operation"
     controller.go_to_joint_state_surg()
@@ -247,6 +258,7 @@ def main():
     controller.go_to_joint_state_surg_left()
     controller.go_to_joint_state_surg_down()
     controller.go_to_joint_surg_right()
+    controller.go_to_joint_state_init() # Init
 
     print "8 - Keep Surgical tool back"
     controller.go_to_joint_state_pick_t2() # Keep tool back
