@@ -17,7 +17,7 @@ This repository demonstrates a surgical robot controller system for the UR3 robo
 - Install ROS kinetic, Gazebo, RViz, Universal Robots and MoveIt. 
 - Assuming your universal robot workspace is named as `surgical_robot_ws`, download the repository to `surgical_robot_ws/src/`
   ```
-  $ cd ur_ws/src
+  $ cd surgical_robot_ws/src
   $ git clone https://github.com/kyleprr/Capstone-Project-Surgical-Robot.git
   ```
 - Build the code under directory `surgical_robot_ws/`,
