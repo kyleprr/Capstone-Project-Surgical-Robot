@@ -8,7 +8,9 @@ This repository demonstrates a surgical robot controller system for the UR3 robo
 
 [`move_robot_arm.py`](https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/surgical_robot/scripts/move_robot_arm.py) move the robot between two points.
 
+https://youtu.be/LHtCcleCMA4
 
+<img src="https://github.com/lihuang3/ur5_notebook/blob/master/media/demo2.gif" width="405">
 
 
 #### How to use this repository
