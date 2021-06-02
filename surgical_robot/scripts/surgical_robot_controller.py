@@ -269,6 +269,10 @@ def main():
     tutorial.go_to_joint_state_surg_left()
     tutorial.go_to_joint_state_surg_down()
     tutorial.go_to_joint_surg_right()
+    tutorial.go_to_joint_state_surg_up()
+    tutorial.go_to_joint_state_surg_left()
+    tutorial.go_to_joint_state_surg_down()
+    tutorial.go_to_joint_surg_right()
 
 
 
