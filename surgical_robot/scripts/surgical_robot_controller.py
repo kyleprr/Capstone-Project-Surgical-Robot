@@ -317,31 +317,31 @@ def main():
     tutorial.go_to_joint_state_pick_t1()
 
     print "3 - Move to body - Incision Start"
-    tutorial.go_to_joint_incision_1()
+    tutorial.go_to_joint_state_incision_1()
 
     print "4 - Incision End"
-    tutorial.go_to_joint_incision_2()
+    tutorial.go_to_joint_state_incision_2()
 
     print "5 - Drop tool 1"
-    tutorial.go_to_joint_drop_t1()
+    tutorial.go_to_joint_state_drop_t1()
 
     print "6 - pick up tool 2"
-    tutorial.go_to_joint_pick_t2()
+    tutorial.go_to_joint_state_pick_t2()
 
     print "7 - surg1"
-    tutorial.go_to_joint_surg()
+    tutorial.go_to_joint_state_surg()
 
     print "8 - surg left"
-    tutorial.go_to_joint_surg_left()
+    tutorial.go_to_joint_state_surg_left()
 
     print "9 - surg right"
     tutorial.go_to_joint_surg_right()
 
     print "10 - surg up"
-    tutorial.go_to_joint_surg_up()
+    tutorial.go_to_joint_state_surg_up()
 
     print "11 - surg down"
-    tutorial.go_to_joint_surg_down()
+    tutorial.go_to_joint_state_surg_down()
     
 
 
