@@ -98,7 +98,7 @@ class MoveGroupPythonIntefaceTutorial(object):
 
 
 
-  def go_to_joint_state1(self):
+  def go_to_joint_state_up(self):
     group = self.group
 
     ## Planning to a Joint Goal
@@ -118,7 +118,7 @@ class MoveGroupPythonIntefaceTutorial(object):
 
 
 
-  def go_to_joint_state2(self):
+  def go_to_joint_state_pick_t1(self):
     group = self.group
 
     ## Planning to a Joint Goal
@@ -137,7 +137,7 @@ class MoveGroupPythonIntefaceTutorial(object):
 
     
 
-  def go_to_joint_state3(self):
+  def go_to_joint_state_incision_1(self):
     group = self.group
 
     ## Planning to a Joint Goal
@@ -156,7 +156,7 @@ class MoveGroupPythonIntefaceTutorial(object):
 
 
 
-  def go_to_joint_state4(self):
+  def go_to_joint_state_incision_2(self):
     group = self.group
 
     ## Planning to a Joint Goal
@@ -174,7 +174,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     return all_close(joint_goal, current_joints, 0.01)
 
 
-  def go_to_joint_state5(self):
+  def go_to_joint_state_drop_t1(self):
     group = self.group
 
     ## Planning to a Joint Goal
@@ -193,7 +193,7 @@ class MoveGroupPythonIntefaceTutorial(object):
 
 
 
-  def go_to_joint_state6(self):
+  def go_to_joint_state_pick_t2(self):
     group = self.group
 
     ## Planning to a Joint Goal
@@ -211,7 +211,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     return all_close(joint_goal, current_joints, 0.01)
 
 
-  def go_to_joint_state7(self):
+  def go_to_joint_state_surg(self):
     group = self.group
 
     ## Planning to a Joint Goal
@@ -229,7 +229,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     return all_close(joint_goal, current_joints, 0.01)
 
 
-  def go_to_joint_state8(self):
+  def go_to_joint_state_surg_left(self):
     group = self.group
 
     ## Planning to a Joint Goal
@@ -247,7 +247,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     return all_close(joint_goal, current_joints, 0.01)
 
 
-  def go_to_joint_state9(self):
+  def go_to_joint_surg_right(self):
     group = self.group
 
     ## Planning to a Joint Goal
@@ -266,7 +266,7 @@ class MoveGroupPythonIntefaceTutorial(object):
 
 
 
-  def go_to_joint_state10(self):
+  def go_to_joint_state_surg_up(self):
     group = self.group
 
     ## Planning to a Joint Goal
@@ -285,7 +285,7 @@ class MoveGroupPythonIntefaceTutorial(object):
 
 
 
-  def go_to_joint_state11(self):
+  def go_to_joint_state_surg_down(self):
     group = self.group
 
     ## Planning to a Joint Goal
@@ -303,62 +303,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     return all_close(joint_goal, current_joints, 0.01)
 
 
-  def go_to_joint_state12(self):
-    group = self.group
-
-    ## Planning to a Joint Goal
-    joint_goal = group.get_current_joint_values()
-    joint_goal = [8.13E-05,-1.570742081,3.51E-05,-1.570706799,-1.87E-05,9.63E-05]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
-    group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
-    group.stop()
-
-    # For testing:
-    current_joints = self.group.get_current_joint_values()
-    return all_close(joint_goal, current_joints, 0.01)
-
-
-  def go_to_joint_state12(self):
-    group = self.group
-
-    ## Planning to a Joint Goal
-    joint_goal = group.get_current_joint_values()
-    joint_goal = [ -0.08471905281137992, -0.20687835805975485,0.5663638322348605, -1.9445044017461406, -1.0427860228086452, -0.048257056580383484], [0.055035623401773925, -0.01403314840714387,0.12058728729265145 , -1.6726743623599312, -1.9883946406685657, 0.10691118817473733]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
-    group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
-    group.stop()
-
-    # For testing:
-    current_joints = self.group.get_current_joint_values()
-    return all_close(joint_goal, current_joints, 0.01)
-
-
-
-  def go_to_joint_state13(self):
-    group = self.group
-
-    ## Planning to a Joint Goal
-    joint_goal = group.get_current_joint_values()
-    joint_goal = [8.13E-05,-1.570742081,3.51E-05,-1.570706799,-1.87E-05,9.63E-05]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
-    group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
-    group.stop()
-
-    # For testing:
-    current_joints = self.group.get_current_joint_values()
-    return all_close(joint_goal, current_joints, 0.01)
-
-
-
 
 def main():
   try:
@@ -367,45 +311,38 @@ def main():
     tutorial = MoveGroupPythonIntefaceTutorial() # Obatin basic robot information
 
     print "1 - Up"
-    tutorial.go_to_joint_state1() # move to home position
+    tutorial.go_to_joint_state_up() # move to home position
 
     print "2 - Pick Up Tool 1"
-    tutorial.go_to_joint_state2()
+    tutorial.go_to_joint_state_pick_t1()
 
     print "3 - Move to body - Incision Start"
-    tutorial.go_to_joint_state3()
+    tutorial.go_to_joint_incision_1()
 
     print "4 - Incision End"
-    tutorial.go_to_joint_state4()
+    tutorial.go_to_joint_incision_2()
 
     print "5 - Drop tool 1"
-    tutorial.go_to_joint_state5()
+    tutorial.go_to_joint_drop_t1()
 
     print "6 - pick up tool 2"
-    tutorial.go_to_joint_state6()
+    tutorial.go_to_joint_pick_t2()
 
     print "7 - surg1"
-    tutorial.go_to_joint_state7()
+    tutorial.go_to_joint_surg()
 
     print "8 - surg left"
-    tutorial.go_to_joint_state8()
+    tutorial.go_to_joint_surg_left()
 
     print "9 - surg right"
-    tutorial.go_to_joint_state9()
+    tutorial.go_to_joint_surg_right()
 
     print "10 - surg up"
-    tutorial.go_to_joint_state10()
+    tutorial.go_to_joint_surg_up()
 
     print "11 - surg down"
-    tutorial.go_to_joint_state11()
+    tutorial.go_to_joint_surg_down()
     
-    print "11 - surg down"
-    tutorial.go_to_joint_state12()
-    
-    
-    print "11 - surg down"
-    tutorial.go_to_joint_state13()
-
 
 
     print "Operation Complete!"
