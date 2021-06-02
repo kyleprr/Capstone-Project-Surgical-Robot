@@ -398,12 +398,12 @@ def main():
 
     print "11 - surg down"
     tutorial.go_to_joint_state11()
-
-
-        print "11 - surg down"
+    
+    print "11 - surg down"
     tutorial.go_to_joint_state12()
-
-        print "11 - surg down"
+    
+    
+    print "11 - surg down"
     tutorial.go_to_joint_state13()
 
 
