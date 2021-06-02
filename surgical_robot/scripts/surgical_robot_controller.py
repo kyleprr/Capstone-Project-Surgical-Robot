@@ -98,6 +98,11 @@ class MoveGroupPythonIntefaceTutorial(object):
 
 
 
+
+
+
+
+
   def go_to_joint_state_up(self):
     group = self.group
 
@@ -120,18 +125,10 @@ class MoveGroupPythonIntefaceTutorial(object):
 
   def go_to_joint_state_pick_t1(self):
     group = self.group
-
-    ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
     joint_goal = [1.44E+00,0.095875728,6.54E-02,-1.801468725,-1.51E+00,7.37E-02]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
     group.stop()
-
-    # For testing:
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
@@ -139,18 +136,10 @@ class MoveGroupPythonIntefaceTutorial(object):
 
   def go_to_joint_state_incision_1(self):
     group = self.group
-
-    ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
     joint_goal = [-1.48E-02,-0.187285299,5.18E-01,-1.787017385,-1.55E+00,-1.78E-03]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
     group.stop()
-
-    # For testing:
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
@@ -158,36 +147,20 @@ class MoveGroupPythonIntefaceTutorial(object):
 
   def go_to_joint_state_incision_2(self):
     group = self.group
-
-    ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
     joint_goal = [7.21E-02,-0.063394436,2.44E-01,-1.639755506,-1.54E+00,8.47E-02]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
     group.stop()
-
-    # For testing:
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
 
   def go_to_joint_state_drop_t1(self):
     group = self.group
-
-    ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
     joint_goal = [1.44E+00,0.095875728,6.54E-02,-1.801468725,-1.51E+00,7.37E-02]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
     group.stop()
-
-    # For testing:
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
@@ -195,72 +168,40 @@ class MoveGroupPythonIntefaceTutorial(object):
 
   def go_to_joint_state_pick_t2(self):
     group = self.group
-
-    ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
     joint_goal = [1.30E+00,0.405495506,5.63E-02,-2.030675439,-1.61E+00,-1.72E+00]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
     group.stop()
-
-    # For testing:
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
 
   def go_to_joint_state_surg(self):
     group = self.group
-
-    ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
     joint_goal = [-1.35E-02,-0.170394006,4.43E-01,-1.88332408,-1.53E+00,2.93E-02]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
     group.stop()
-
-    # For testing:
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
 
   def go_to_joint_state_surg_left(self):
     group = self.group
-
-    ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
     joint_goal = [-8.47E-02,-0.206878358,5.66E-01,-1.944504402,-1.04E+00,-4.83E-02]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
     group.stop()
-
-    # For testing:
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
 
   def go_to_joint_surg_right(self):
     group = self.group
-
-    ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
     joint_goal = [5.50E-02,-0.014033148,1.21E-01,-1.672674362,-1.99E+00,1.07E-01]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
     group.stop()
-
-    # For testing:
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
@@ -268,18 +209,10 @@ class MoveGroupPythonIntefaceTutorial(object):
 
   def go_to_joint_state_surg_up(self):
     group = self.group
-
-    ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
     joint_goal = [-4.02E-03,-0.201215739,7.42E-01,-2.589742394,-1.59E+00,3.45E-02]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
     group.stop()
-
-    # For testing:
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
@@ -287,18 +220,10 @@ class MoveGroupPythonIntefaceTutorial(object):
 
   def go_to_joint_state_surg_down(self):
     group = self.group
-
-    ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
     joint_goal = [-1.04E-02,-0.053113435,1.42E-01,-1.580073414,-1.57E+00,3.23E-02]
-
-    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
-
-    # Calling ``stop()`` ensures that there is no residual movement
     group.stop()
-
-    # For testing:
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
@@ -318,8 +243,10 @@ def main():
 
     print "3 - Move to body - Incision Start"
     tutorial.go_to_joint_state_incision_1()
-
-    print "4 - Incision End"
+    tutorial.go_to_joint_state_incision_2()
+    tutorial.go_to_joint_state_incision_1()
+    tutorial.go_to_joint_state_incision_2()
+    tutorial.go_to_joint_state_incision_1()
     tutorial.go_to_joint_state_incision_2()
 
     print "5 - Drop tool 1"
