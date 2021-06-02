@@ -9,11 +9,8 @@
 ## We also import `rospy`_ and some messages that we will use:
 
 """
-
 Terminal Output Format: [elbow_joint, shoulder_lift_joint, shoulder_pan_joint, wrist_1_joint, wrist_2_joint, wrist_3_joint]
-
 Code Required Format: ['shoulder_pan_joint', 'shoulder_lift_joint','elbow_joint', 'wrist_1_joint', 'wrist_2_joint','wrist_3_joint']
-
 """
 
 import sys
@@ -92,16 +89,7 @@ class MoveGroupPythonIntefaceTutorial(object):
     self.group_names = group_names
 
 
-
-
-
-
-
-
-
-
-
-
+### BEGIN WAYPOINTS ###
 
   def go_to_joint_state_up(self):
     group = self.group
@@ -120,9 +108,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
-
-
-
   def go_to_joint_state_pick_t1(self):
     group = self.group
     joint_goal = group.get_current_joint_values()
@@ -131,8 +116,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     group.stop()
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
-
-    
 
   def go_to_joint_state_incision_1(self):
     group = self.group
@@ -143,8 +126,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
-
-
   def go_to_joint_state_incision_2(self):
     group = self.group
     joint_goal = group.get_current_joint_values()
@@ -153,7 +134,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     group.stop()
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
-
 
   def go_to_joint_state_drop_t1(self):
     group = self.group
@@ -164,8 +144,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
-
-
   def go_to_joint_state_pick_t2(self):
     group = self.group
     joint_goal = group.get_current_joint_values()
@@ -174,7 +152,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     group.stop()
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
-
 
   def go_to_joint_state_surg(self):
     group = self.group
@@ -185,7 +162,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
-
   def go_to_joint_state_surg_left(self):
     group = self.group
     joint_goal = group.get_current_joint_values()
@@ -194,7 +170,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     group.stop()
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
-
 
   def go_to_joint_surg_right(self):
     group = self.group
@@ -205,8 +180,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
-
-
   def go_to_joint_state_surg_up(self):
     group = self.group
     joint_goal = group.get_current_joint_values()
@@ -215,8 +188,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     group.stop()
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
-
-
 
   def go_to_joint_state_surg_down(self):
     group = self.group
@@ -227,64 +198,63 @@ class MoveGroupPythonIntefaceTutorial(object):
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
+### END WAYPOINTS ###
 
+
+### MAIN CONTROLLER ###
 
 def main():
   try:
     print "Press 'ENTER' to begin. (CTRL + D) to exit:"
-    raw_input()
-    tutorial = MoveGroupPythonIntefaceTutorial() # Obatin basic robot information
+    raw_input() # Wait for Enter or CTRL + D
+    controller = MoveGroupPythonIntefaceTutorial() # Obatin basic robot information
 
-    print "1 - Up"
-    tutorial.go_to_joint_state_up() # move to home position
+    print "1 - Up Position"
+    controller.go_to_joint_state_up() # Move to up position
 
-    print "2 - Pick Up Tool 1"
-    tutorial.go_to_joint_state_pick_t1()
+    print "2 - Pick Up Surgical Knife"
+    controller.go_to_joint_state_pick_t1() # Pick up Surgical Knife
 
-    print "3 - Move to body - Incision Start"
-    tutorial.go_to_joint_state_incision_1()
-    tutorial.go_to_joint_state_incision_2()
-    tutorial.go_to_joint_state_incision_1()
-    tutorial.go_to_joint_state_incision_2()
-    tutorial.go_to_joint_state_incision_1()
-    tutorial.go_to_joint_state_incision_2()
+    print "3 - Move to body and make incision cuts"
+    controller.go_to_joint_state_incision_1()
+    controller.go_to_joint_state_incision_2()
+    controller.go_to_joint_state_incision_1()
+    controller.go_to_joint_state_incision_2()
+    controller.go_to_joint_state_incision_1()
+    controller.go_to_joint_state_incision_2()
 
-    print "5 - Drop tool 1"
-    tutorial.go_to_joint_state_drop_t1()
+    print "5 - Keep Surgical Knife back"
+    controller.go_to_joint_state_drop_t1() # Keep knife back
 
-    print "6 - pick up tool 2"
-    tutorial.go_to_joint_state_pick_t2()
+    print "6 - Pick up Surgical tool"
+    controller.go_to_joint_state_pick_t2() # Pick up new tool
 
-    print "7 - surg1"
-    tutorial.go_to_joint_state_surg()
-    tutorial.go_to_joint_state_surg_up()
-    tutorial.go_to_joint_state_surg_left()
-    tutorial.go_to_joint_state_surg_down()
-    tutorial.go_to_joint_surg_right()
-    tutorial.go_to_joint_state_surg_up()
-    tutorial.go_to_joint_state_surg_left()
-    tutorial.go_to_joint_state_surg_down()
-    tutorial.go_to_joint_surg_right()
-    tutorial.go_to_joint_state_surg_up()
-    tutorial.go_to_joint_state_surg_left()
-    tutorial.go_to_joint_state_surg_down()
-    tutorial.go_to_joint_surg_right()
-    tutorial.go_to_joint_state_surg_up()
-    tutorial.go_to_joint_state_surg_left()
-    tutorial.go_to_joint_state_surg_down()
-    tutorial.go_to_joint_surg_right()
+    print "7 - Perform Operation"
+    controller.go_to_joint_state_surg()
+    controller.go_to_joint_state_surg_up()
+    controller.go_to_joint_state_surg_left()
+    controller.go_to_joint_state_surg_down()
+    controller.go_to_joint_surg_right()
+    controller.go_to_joint_state_surg_up()
+    controller.go_to_joint_state_surg_left()
+    controller.go_to_joint_state_surg_down()
+    controller.go_to_joint_surg_right()
+    controller.go_to_joint_state_surg_up()
+    controller.go_to_joint_state_surg_left()
+    controller.go_to_joint_state_surg_down()
+    controller.go_to_joint_surg_right()
+    controller.go_to_joint_state_surg_up()
+    controller.go_to_joint_state_surg_left()
+    controller.go_to_joint_state_surg_down()
+    controller.go_to_joint_surg_right()
 
+    print "8 - Keep Surgical tool back"
+    controller.go_to_joint_state_pick_t2() # Keep tool back
 
-
-    print "12 - drop t2"
-    tutorial.go_to_joint_state_pick_t2()
-
-    print "13 - up"
-    tutorial.go_to_joint_state_up()
+    print "9 - Return to Up Position"
+    controller.go_to_joint_state_up() # return to up position
     
-
-
-    print "Operation Complete!"
+    print "Operation Complete!" # End of Operation
 
   except rospy.ROSInterruptException:
     return
@@ -293,3 +263,5 @@ def main():
 
 if __name__ == '__main__':
   main()
+
+  ### END OF CODE ###
