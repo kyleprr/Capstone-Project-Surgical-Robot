@@ -158,7 +158,7 @@ class MoveGroupPythonIntefaceTutorial(object):
 
 def main():
   try:
-    print "Press "ENTER" to begin. (CTRL + D) to exit:"
+    print "Press 'ENTER' to begin. (CTRL + D) to exit:"
     raw_input()
     tutorial = MoveGroupPythonIntefaceTutorial() # Obatin basic robot information
 
