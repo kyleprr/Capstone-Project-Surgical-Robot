@@ -10,9 +10,9 @@
 
 """
 
-here here
+Terminal Output Format: [elbow_joint, shoulder_lift_joint, shoulder_pan_joint, wrist_1_joint, wrist_2_joint, wrist_3_joint]
 
-traj.joint_names = ['shoulder_pan_joint', 'shoulder_lift_joint','elbow_joint', 'wrist_1_joint', 'wrist_2_joint','wrist_3_joint']
+Code Required Format: ['shoulder_pan_joint', 'shoulder_lift_joint','elbow_joint', 'wrist_1_joint', 'wrist_2_joint','wrist_3_joint']
 
 """
 
@@ -95,23 +95,15 @@ class MoveGroupPythonIntefaceTutorial(object):
 
 
 
-  def go_to_joint_state(self):
+
+
+
+  def go_to_joint_state1(self):
     group = self.group
 
     ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
-    # joint_goal[0] = 0
-    # joint_goal[1] = -1.44
-    # joint_goal[2] = 1.4
-    # joint_goal[3] = 0.6
-    # joint_goal[4] = 0
-    # joint_goal[5] = -0.33
-    joint_goal[0] = 1.297
-    joint_goal[1] = -2.4913
-    joint_goal[2] = -0.32298
-    joint_goal[3] = 2.9953
-    joint_goal[4] = 1.4986
-    joint_goal[5] = -1.37723
+    joint_goal = [8.13E-05,-1.570742081,3.51E-05,-1.570706799,-1.87E-05,9.63E-05]
 
     # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
@@ -131,12 +123,7 @@ class MoveGroupPythonIntefaceTutorial(object):
 
     ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
-    joint_goal[0] = 0
-    joint_goal[1] = 0
-    joint_goal[2] = 0
-    joint_goal[3] = 0
-    joint_goal[4] = 0
-    joint_goal[5] = 0
+    joint_goal = [1.44E+00,0.095875728,6.54E-02,-1.801468725,-1.51E+00,7.37E-02]
 
     # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
@@ -155,12 +142,7 @@ class MoveGroupPythonIntefaceTutorial(object):
 
     ## Planning to a Joint Goal
     joint_goal = group.get_current_joint_values()
-    joint_goal[0] = 0
-    joint_goal[1] = -1.44
-    joint_goal[2] = 1.4
-    joint_goal[3] = 0.6
-    joint_goal[4] = 0
-    joint_goal[5] = -0.33
+    joint_goal = [-1.48E-02,-0.187285299,5.18E-01,-1.787017385,-1.55E+00,-1.78E-03]
 
     # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
     group.go(joint_goal, wait=True)
@@ -176,22 +158,21 @@ class MoveGroupPythonIntefaceTutorial(object):
 
 def main():
   try:
-    print "Press `Enter` to begin setting up the moveit_commander (press ctrl-d to exit):"
+    print "Press "ENTER" to begin. (CTRL + D) to exit:"
     raw_input()
-    tutorial = MoveGroupPythonIntefaceTutorial()
+    tutorial = MoveGroupPythonIntefaceTutorial() # Obatin basic robot information
 
-    print "Press `Enter` to execute a movement using a joint state goal:"
-    #raw_input()
-    tutorial.go_to_joint_state()
+    print "Up"
+    tutorial.go_to_joint_state1() # move to home position
 
-    print "Press `Enter` to execute a movement using a joint state goal 2:"
-    #raw_input()
+    print "Pick Up Tool 1"
     tutorial.go_to_joint_state2()
 
-
-    print "Press `Enter` to execute a movement using a joint state goal 3:"
-    #raw_input()
+    print "Move to body - Incision Start"
     tutorial.go_to_joint_state3()
+
+
+
 
     print "Operation Complete!"
 
