@@ -342,6 +342,12 @@ def main():
 
     print "11 - surg down"
     tutorial.go_to_joint_state_surg_down()
+
+    print "12 - drop t2"
+    tutorial.go_to_joint_state_pick_t2()
+
+    print "13 - up"
+    tutorial.go_to_joint_state_up()
     
 
 
