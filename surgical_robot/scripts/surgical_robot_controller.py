@@ -338,6 +338,8 @@ class MoveGroupPythonIntefaceTutorial(object):
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
 
+
+
   def go_to_joint_state13(self):
     group = self.group
 
@@ -354,10 +356,6 @@ class MoveGroupPythonIntefaceTutorial(object):
     # For testing:
     current_joints = self.group.get_current_joint_values()
     return all_close(joint_goal, current_joints, 0.01)
-
-
-    
-[]
 
 
 
@@ -400,13 +398,6 @@ def main():
 
     print "11 - surg down"
     tutorial.go_to_joint_state11()
-
-    print "12 - bow"
-    tutorial.go_to_joint_state12()
-
-    print "13 - Up"
-    tutorial.go_to_joint_state13()
-
 
 
 
