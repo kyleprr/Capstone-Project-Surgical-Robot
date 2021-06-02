@@ -10,7 +10,9 @@ This repository demonstrates a surgical robot controller system for the UR3 robo
 
 https://youtu.be/LHtCcleCMA4
 
-<img src="https://github.com/lihuang3/ur5_notebook/blob/master/media/demo2.gif" width="405">
+<img src="https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/media/Simulation.gif" width="405">
+
+<img src="https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/media/Simulation_Cropped.mp4" width="405">
 
 
 #### How to use this repository
