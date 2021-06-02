@@ -257,18 +257,20 @@ def main():
 
     print "7 - surg1"
     tutorial.go_to_joint_state_surg()
-
-    print "8 - surg left"
+    tutorial.go_to_joint_state_surg_up()
     tutorial.go_to_joint_state_surg_left()
-
-    print "9 - surg right"
+    tutorial.go_to_joint_state_surg_down()
+    tutorial.go_to_joint_surg_right()
+    tutorial.go_to_joint_state_surg_up()
+    tutorial.go_to_joint_state_surg_left()
+    tutorial.go_to_joint_state_surg_down()
+    tutorial.go_to_joint_surg_right()
+    tutorial.go_to_joint_state_surg_up()
+    tutorial.go_to_joint_state_surg_left()
+    tutorial.go_to_joint_state_surg_down()
     tutorial.go_to_joint_surg_right()
 
-    print "10 - surg up"
-    tutorial.go_to_joint_state_surg_up()
 
-    print "11 - surg down"
-    tutorial.go_to_joint_state_surg_down()
 
     print "12 - drop t2"
     tutorial.go_to_joint_state_pick_t2()
