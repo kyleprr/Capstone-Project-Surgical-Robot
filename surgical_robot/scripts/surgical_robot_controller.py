@@ -303,8 +303,62 @@ class MoveGroupPythonIntefaceTutorial(object):
     return all_close(joint_goal, current_joints, 0.01)
 
 
+  def go_to_joint_state12(self):
+    group = self.group
+
+    ## Planning to a Joint Goal
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [8.13E-05,-1.570742081,3.51E-05,-1.570706799,-1.87E-05,9.63E-05]
+
+    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
+    group.go(joint_goal, wait=True)
+
+    # Calling ``stop()`` ensures that there is no residual movement
+    group.stop()
+
+    # For testing:
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
+
+
+  def go_to_joint_state12(self):
+    group = self.group
+
+    ## Planning to a Joint Goal
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [ -0.08471905281137992, -0.20687835805975485,0.5663638322348605, -1.9445044017461406, -1.0427860228086452, -0.048257056580383484], [0.055035623401773925, -0.01403314840714387,0.12058728729265145 , -1.6726743623599312, -1.9883946406685657, 0.10691118817473733]
+
+    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
+    group.go(joint_goal, wait=True)
+
+    # Calling ``stop()`` ensures that there is no residual movement
+    group.stop()
+
+    # For testing:
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
+
+  def go_to_joint_state13(self):
+    group = self.group
+
+    ## Planning to a Joint Goal
+    joint_goal = group.get_current_joint_values()
+    joint_goal = [8.13E-05,-1.570742081,3.51E-05,-1.570706799,-1.87E-05,9.63E-05]
+
+    # The go command can be called with joint values, poses, or without any parameters if you have already set the pose or joint target for the group
+    group.go(joint_goal, wait=True)
+
+    # Calling ``stop()`` ensures that there is no residual movement
+    group.stop()
+
+    # For testing:
+    current_joints = self.group.get_current_joint_values()
+    return all_close(joint_goal, current_joints, 0.01)
+
 
     
+[]
+
 
 
 
@@ -346,6 +400,12 @@ def main():
 
     print "11 - surg down"
     tutorial.go_to_joint_state11()
+
+    print "12 - bow"
+    tutorial.go_to_joint_state12()
+
+    print "13 - Up"
+    tutorial.go_to_joint_state13()
 
 
 
