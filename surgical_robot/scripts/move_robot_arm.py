@@ -3,7 +3,8 @@
 # For testing only (Not part of project)
 # Credit: https://github.com/lihuang3/ur5_ROS-Gazebo/blob/master/old%20code/testmotion.py
 
-# Send joint values to UR3 using messages
+# Send joint values to UR3 using Ros messages
+
 
 from std_msgs.msg import Header
 from trajectory_msgs.msg import JointTrajectory
