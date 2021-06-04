@@ -29,14 +29,11 @@ The following repository assumes that [ROS](https://www.ros.org/) is installed a
 - Make sure you have installed [Python2.7](https://www.python.org/download/releases/2.7/) and the required packages & libraries listed below:
 
 Install Universal Robots ROS Packages:
-```
-  $ sudo apt-get install ros-kinetic-universal-robot
-  $ git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git universal_robots_ros_driver
-  $ git clone -b calibration_devel https://github.com/fmauch/universal_robot.git universal_robot
   ```
-
+  $ sudo apt-get install ros-kinetic-universal-robot
+  ```
 Install Universal Robots ROS Drivers:
-```
+  ```
   $ git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git universal_robots_ros_driver
   $ git clone -b calibration_devel https://github.com/fmauch/universal_robot.git universal_robot
   ```
