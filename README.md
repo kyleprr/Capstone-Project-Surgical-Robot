@@ -5,7 +5,7 @@ This repository demonstrates a robot arm controller system for the UR3 robotic a
 
 The following repository assumes that [ROS](https://www.ros.org/) is installed and setup on a linux machine. This package has been tested using `ROS Kinetic` running on a `Ubuntu 16.04 LTS` machine.
 
-### Simulated Environment [Gazebo & RViz]
+## Simulated Environment [Gazebo & RViz]
 
 #### Planned Environment Layout:
 <img src="https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/media/planned-environment-layout.jpg" width="850">
@@ -14,7 +14,7 @@ The following repository assumes that [ROS](https://www.ros.org/) is installed a
 <img src="https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/media/Simulation-full.gif" width="850">
 
 
-### Constrol System:
+## Constrol System
 1. [`surgical_robot_controller.py`](https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/surgical_robot/scripts/surgical_robot_controller.py) publishes waypoints for the robot arm to follow in sequence to perform the required surgery.
 
 2. [`move_robot_arm.py`](https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/surgical_robot/scripts/move_robot_arm.py) is not part of the project but a short script to test the movement of the robotic arm to ensure it has been calibrated correctly.
@@ -24,7 +24,7 @@ The following repository assumes that [ROS](https://www.ros.org/) is installed a
 4. A useful tool to visualise the UR robot movements can be found here: https://cyberbotics.com/doc/guide/ure
 
 
-### How to use this repository
+## How to use this repository
 - This project was developed and tested in [Ubuntu 16.04 LTS (Xenial Xerus)](https://releases.ubuntu.com/16.04/) with `ROS Kinetic`.
 - Make sure you have installed [Python2.7](https://www.python.org/download/releases/2.7/) and the required packages & libraries listed below:
 
