@@ -7,10 +7,10 @@ The following repository assumes that [ROS](https://www.ros.org/) is installed a
 
 ## Simulated Environment [Gazebo & RViz]
 
-#### Planned Environment Layout:
+### Planned Environment Layout:
 <img src="https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/media/planned-environment-layout.jpg" width="850">
 
-#### Final Environment Layout (Due to hardware issues):
+### Final Environment Layout (Due to hardware issues):
 <img src="https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/media/Simulation-full.gif" width="850">
 
 
@@ -28,7 +28,20 @@ The following repository assumes that [ROS](https://www.ros.org/) is installed a
 - This project was developed and tested in [Ubuntu 16.04 LTS (Xenial Xerus)](https://releases.ubuntu.com/16.04/) with `ROS Kinetic`.
 - Make sure you have installed [Python2.7](https://www.python.org/download/releases/2.7/) and the required packages & libraries listed below:
 
-- Install [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu), Gazebo, RViz, Universal Robots and MoveIt. 
+Install Universal Robots ROS Packages:
+```
+  $ sudo apt-get install ros-kinetic-universal-robot
+  $ git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git universal_robots_ros_driver
+  $ git clone -b calibration_devel https://github.com/fmauch/universal_robot.git universal_robot
+  ```
+
+Install Universal Robots ROS Drivers:
+```
+  $ git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git universal_robots_ros_driver
+  $ git clone -b calibration_devel https://github.com/fmauch/universal_robot.git universal_robot
+  ```
+
+- Install [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu), Gazebo, RViz, Universal Robots and MoveIt packages. 
 - Created a workspace named as `surgical_robot_ws`, download the repository to `surgical_robot_ws/src/`
   ```
   $ cd surgical_robot_ws/src
