@@ -1,22 +1,29 @@
 # Engineering Capstone Project - AUT-21-04348
 ## Robot Arm Control for Minimally Invasive Surgery
 
-This repository demonstrates a surgical robot controller system for the UR3 robotic arm. A python script was developed to control the robotic arm.
+This repository demonstrates a robot arm controller system for the UR3 robotic arm. A python script was developed to control the robotic arm within a simulated environment inside Gazebo.
+
+The following repository assumes that [ROS](https://www.ros.org/) is installed and setup on a linux machine. The package has been tested using `ROS Kinetic` running on a `Ubuntu 16.04 LTS` machine.
 
 
 [`surgical_robot_controller.py`](https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/surgical_robot/scripts/surgical_robot_controller.py) controls the robot.
 
 [`move_robot_arm.py`](https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/surgical_robot/scripts/move_robot_arm.py) move the robot between two points.
 
-https://youtu.be/LHtCcleCMA4
-
-<img src="https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/media/Simulation-full.gif" width="850">
 
 
 <img src="https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/media/planned-environment-layout.jpg" width="850">
 
 
+<img src="https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/media/Simulation-full.gif" width="850">
 
+
+How to run:
+https://youtu.be/LHtCcleCMA4
+
+
+
+Move arm:
 https://cyberbotics.com/doc/guide/ure
 
 
