@@ -1,18 +1,17 @@
 #!/usr/bin/python
 
-# Send joint values to UR3 using messages
+# For testing only (Not part of project)
+# Credit: https://github.com/lihuang3/ur5_ROS-Gazebo/blob/master/old%20code/testmotion.py
+
+# Send joint values to UR3 using Ros messages
+
 
 from std_msgs.msg import Header
 from trajectory_msgs.msg import JointTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
 import rospy
 
-# waypoints = [[0,0,0,-1.5,-1.5,0], [0,0,0,0,0,0]] #surg
-# waypoints = [[0,-1.57,0,-1.57,0,0], [0,0,0,0,0,0]] #bow
-waypoints = [[ -0.08471905281137992, -0.20687835805975485,0.5663638322348605, -1.9445044017461406, -1.0427860228086452, -0.048257056580383484], [0.055035623401773925, -0.01403314840714387,0.12058728729265145 , -1.6726743623599312, -1.9883946406685657, 0.10691118817473733]] #bow
-
-
-
+waypoints = [[0,-1.57,0,-1.57,0,0], [0,0,0,0,0,0]] #bow
 
 def main():
     rospy.init_node('send_joints')
