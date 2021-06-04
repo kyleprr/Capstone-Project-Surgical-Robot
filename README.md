@@ -10,7 +10,7 @@ This repository demonstrates a surgical robot controller system for the UR3 robo
 
 https://youtu.be/LHtCcleCMA4
 
-<img src="https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/media/Simulation.gif" width="800">
+<img src="https://github.com/kyleprr/Capstone-Project-Surgical-Robot/blob/main/media/Simulation-full.gif" width="800">
 
 https://cyberbotics.com/doc/guide/ure
 
